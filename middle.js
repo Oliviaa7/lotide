@@ -29,9 +29,7 @@ const middle = function(arr) {
   if (arr.length % 2 === 1) {
     const oddMiddle = Math.floor(arr.length / 2);
     result.push(arr[oddMiddle]);
-  }
-  
-  if (arr.length % 2 === 0) {
+  } else {
     const evenMiddle1 = arr.length / 2 - 1;
     const evenMiddle2 = arr.length / 2;
     result.push(arr[evenMiddle1], arr[evenMiddle2]);
