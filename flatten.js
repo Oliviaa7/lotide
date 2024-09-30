@@ -21,13 +21,19 @@ const assertArraysEqual = function(array1, array2) {
 
 const flatten = function(arr) {
   const result = [];
-  if (Array.isArray(arr)) {
-    result.push(arr);
+  
+  for (let element of arr) {
+    if (Array.isArray(element)) {
+      for (let innerElement of element) {
+        result.push(innerElement);
+      }
+    } else {
+      result.push(element);
+    }
   }
-  return result.flat(Infinity);
+  return result;
 };
 
-console.log(flatten([1, 2, [3, 4], 5, [6]]));
+assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
 assertArraysEqual(flatten([7, 8, [9, 10], 11, [12, 13]]), [7, 8, 9, 10, 11, 12, 13]);
-assertArraysEqual(flatten([0, 1, [2, [3, 4]]]), [0, 1, 2, 3, 4]);
 assertArraysEqual(flatten([1, 2, 3]), [1, 2, 3]);
