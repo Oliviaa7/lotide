@@ -30,7 +30,7 @@ const firstNames = [
   "Jason",
   "Salima",
   "Fang",
-  "Joe",
+  "Joe"
 ];
 
 const result1 = countOnly(firstNames, {
