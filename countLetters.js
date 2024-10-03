@@ -8,7 +8,6 @@ const assertEqual = function(actual, expected) {
 
 const countLetters = function(str) {
   const result = {};
-  str = str.toLowerCase();
 
   for (const char of str) {
     if (char !== ' ') {
