@@ -34,11 +34,11 @@ const eqObjects = (obj1, obj2) => {
       if (eqArrays(obj1[key], obj2[key]) === false) {
         return false;
       }
-    } else if (obj1[key] === obj2[key]) {
-      return true;
+    } else if (obj1[key] !== obj2[key]) {
+      return false;
     }
   }
-  return false;
+  return true;
 };
 
 const shirtObject = { colour: "red", size: "medium" };
