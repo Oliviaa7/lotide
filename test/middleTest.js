@@ -2,7 +2,7 @@ const assert = require('chai').assert;
 const middle = require("../middle");
 
 describe("#middle", () => {
-  
+
   it("returns [] for [1]", () => {
     assert.deepEqual(middle([1]), []);
   });
@@ -25,5 +25,12 @@ describe("#middle", () => {
 
   it("returns [3, 4] for [1, 2, 3, 4, 5, 6]", () => {
     assert.deepEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
+  });
+
+  it("makes sure the original array was not altered by the middle function", () => {
+    const arr = [1, 2, 3, 4, 5];
+    const result = middle(arr);
+    assert.deepEqual(result, [3]);
+    assert.strictEqual(arr.length, 5);
   });
 });
