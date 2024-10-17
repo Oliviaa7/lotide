@@ -14,22 +14,24 @@ const letterPositions = require("./letterPositions");
 const map = require("./map");
 const takeUntil = require("./takeUntil");
 const without = require("./without");
+const assertObjectsEqual = require("./assertObjectsEqual");
 
 module.exports = {
-  head:              head,
-  tail:              tail,
-  middle:            middle,
-  assertEqual:       assertEqual,
-  eqArrays:          eqArrays,
-  assertArraysEqual: assertArraysEqual,
-  countOnly:         countOnly,
-  countLetters:      countLetters,
-  eqObjects:         eqObjects,
-  findKey:           findKey,
-  findKeyByValue:    findKeyByValue,
-  flatten:           flatten,
-  letterPositions:   letterPositions,
-  map:               map,
-  takeUntil:         takeUntil,
-  without:           without
+  head:               head,
+  tail:               tail,
+  middle:             middle,
+  assertEqual:        assertEqual,
+  eqArrays:           eqArrays,
+  assertArraysEqual:  assertArraysEqual,
+  countOnly:          countOnly,
+  countLetters:       countLetters,
+  eqObjects:          eqObjects,
+  findKey:            findKey,
+  findKeyByValue:     findKeyByValue,
+  flatten:            flatten,
+  letterPositions:    letterPositions,
+  map:                map,
+  takeUntil:          takeUntil,
+  without:            without,
+  assertObjectsEqual: assertObjectsEqual
 };
