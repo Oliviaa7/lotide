@@ -6,7 +6,4 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-assertEqual("We are equal", "We are equal");
-assertEqual("Are we equal?", "No we are not");
-assertEqual(4, 4);
-assertEqual(2, 6);
+module.exports = assertEqual;
